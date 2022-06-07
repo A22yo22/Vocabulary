@@ -59,11 +59,8 @@ public class SaveScript : MonoBehaviour
         {
             GameObject voc = Instantiate(vocPrefab);
             voc.transform.position = spawnPos;
-            spawnPos.y -= 300;
-            viewPort.transform.parent = voc.transform;
-
-            voc.GetComponent<VocabalObjectScript>().SetObjectNames(listManager.VocabularyListEnglish[i], listManager.VocabularyListGerman[i]);
-
+            spawnPos.y -= 150;
+            voc.transform.SetParent(viewPort.transform);
             voc.GetComponent<VocabalObjectScript>().SetObjectNames(PlayerPrefs.GetString("VocENG" + i), PlayerPrefs.GetString("VocGER" + i));
         }
     }
