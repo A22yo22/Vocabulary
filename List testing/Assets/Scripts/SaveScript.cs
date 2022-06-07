@@ -18,7 +18,6 @@ public class SaveScript : MonoBehaviour
     void Start()
     {
         LoadGame();
-        PlayerPrefs.DeleteAll();
     }
 
     //Saves the Game
@@ -55,7 +54,7 @@ public class SaveScript : MonoBehaviour
 
     public void SpawnVocabularyOBJs()
     {
-        Vector3 spawnPos = new Vector3(0, 300, 0);
+        Vector3 spawnPos = new Vector3(0, -80, 0);
 
         //removes all vocs that got spawned
         for (int i = 0; i < spawnedVocs.Count; i++)
