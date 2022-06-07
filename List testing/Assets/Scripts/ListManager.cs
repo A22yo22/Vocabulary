@@ -54,12 +54,14 @@ public class ListManager : MonoBehaviour
             ReadMode.SetActive(false);
             WriteMode.SetActive(true);
             Read = false;
+            Debug.Log("Write mode");
         }
         else
         {
             ReadMode.SetActive(true);
             WriteMode.SetActive(false);
             Read = true;
+            Debug.Log("Read mode");
         }
     }
 }
