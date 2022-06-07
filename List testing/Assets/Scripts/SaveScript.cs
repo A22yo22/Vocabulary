@@ -40,7 +40,7 @@ public class SaveScript : MonoBehaviour
     {
         int length = PlayerPrefs.GetInt("VocENGLength");
 
-        //clears the list before s
+        //clears the list before saveing
 
         for (int i = 0; i < length; i++)
         {
@@ -51,16 +51,28 @@ public class SaveScript : MonoBehaviour
         SpawnVocabularyOBJs();
     }
 
+    List<GameObject> spawnedVocs = new List<GameObject>();
+
     public void SpawnVocabularyOBJs()
     {
         Vector3 spawnPos = new Vector3(0, 300, 0);
 
+        //removes all vocs that got spawned
+        for (int i = 0; i < spawnedVocs.Count; i++)
+        {
+            spawnedVocs.RemoveAt(i);
+        }
+
+        //spawns vocs
         for (int i = 0; i < listManager.VocabularyListEnglish.Count; i++)
         {
             GameObject voc = Instantiate(vocPrefab);
+            voc.transform.SetParent(viewPort.transform);
             voc.transform.position = spawnPos;
             spawnPos.y -= 150;
-            voc.transform.SetParent(viewPort.transform);
+
+            spawnedVocs.Add(voc);
+
             voc.GetComponent<VocabalObjectScript>().SetObjectNames(PlayerPrefs.GetString("VocENG" + i), PlayerPrefs.GetString("VocGER" + i));
         }
     }

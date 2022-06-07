@@ -61,6 +61,7 @@ public class ListManager : MonoBehaviour
             ReadMode.SetActive(true);
             WriteMode.SetActive(false);
             Read = true;
+            saveScript.SpawnVocabularyOBJs();
             Debug.Log("Read mode");
         }
     }
