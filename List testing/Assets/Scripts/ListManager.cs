@@ -24,6 +24,9 @@ public class ListManager : MonoBehaviour
     public GameObject WriteMode;
     public GameObject ReadMode;
 
+    //settings object
+    public GameObject TabsForSettings;
+
     //gets the input from the textFields
     public void ReadEnglish(string s)
     {
@@ -42,6 +45,20 @@ public class ListManager : MonoBehaviour
         inputFieldEnglish.text = "";
         inputFieldGerman.text = "";
         saveScript.SaveGame(VocabularyListEnglish, VocabularyListGerman);
+    }
+
+    bool settingsOpened = false;
+    //opens the settings
+    public void Settings()
+    {
+        if(settingsOpened)
+        {
+            TabsForSettings.SetActive(false);
+        }
+        else
+        {
+            TabsForSettings.SetActive(true);
+        }
     }
 
     //changes the write to read mode or around
@@ -64,5 +81,10 @@ public class ListManager : MonoBehaviour
             saveScript.SpawnVocabularyOBJs();
             Debug.Log("Read mode");
         }
+    }
+
+    public void TrainMode()
+    {
+
     }
 }
