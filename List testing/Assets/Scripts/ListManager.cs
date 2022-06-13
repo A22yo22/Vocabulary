@@ -26,6 +26,7 @@ public class ListManager : MonoBehaviour
 
     //settings object
     public GameObject TabsForSettings;
+    public GameObject viewPort;
 
     //gets the input from the textFields
     public void ReadEnglish(string s)
@@ -54,10 +55,12 @@ public class ListManager : MonoBehaviour
         if(settingsOpened)
         {
             TabsForSettings.SetActive(false);
+            viewPort.SetActive(true);
         }
         else
         {
             TabsForSettings.SetActive(true);
+            viewPort.SetActive(false);
         }
     }
 
