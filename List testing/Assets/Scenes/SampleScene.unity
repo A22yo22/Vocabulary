@@ -1472,6 +1472,8 @@ MonoBehaviour:
   TabsForSettings: {fileID: 1878140127}
   viewPort: {fileID: 988358989}
   TabsButton: {fileID: 784416245}
+  TabsClosedButtonPos: -885
+  TabsOpenedButtonPos: -690
 --- !u!114 &746108234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,7 +1604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -690, y: 475}
+  m_AnchoredPosition: {x: -885, y: 475}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784416247
@@ -3222,7 +3224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1878140128
 RectTransform:
   m_ObjectHideFlags: 0

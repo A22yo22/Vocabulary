@@ -67,6 +67,7 @@ public class ListManager : MonoBehaviour
             TabsForSettings.SetActive(true);
             viewPort.SetActive(false);
             TabsButton.transform.position = new Vector3(TabsOpenedButtonPos, 475, 0);
+            TabsButton.transform.position = Vector3.zero;
         }
     }
 
