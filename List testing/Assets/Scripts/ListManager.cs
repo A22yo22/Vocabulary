@@ -29,6 +29,9 @@ public class ListManager : MonoBehaviour
     public GameObject viewPort;
     public GameObject TabsButton;
 
+    public int TabsClosedButtonPos = -885;
+    public int TabsOpenedButtonPos = -690;
+
     //gets the input from the textFields
     public void ReadEnglish(string s)
     {
@@ -57,11 +60,13 @@ public class ListManager : MonoBehaviour
         {
             TabsForSettings.SetActive(false);
             viewPort.SetActive(true);
+            TabsButton.transform.position = new Vector3(TabsClosedButtonPos, 475, 0);
         }
         else
         {
             TabsForSettings.SetActive(true);
             viewPort.SetActive(false);
+            TabsButton.transform.position = new Vector3(TabsOpenedButtonPos, 475, 0);
         }
     }
 
