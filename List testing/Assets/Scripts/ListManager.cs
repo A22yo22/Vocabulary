@@ -27,6 +27,7 @@ public class ListManager : MonoBehaviour
     //settings object
     public GameObject TabsForSettings;
     public GameObject viewPort;
+    public GameObject TabsButton;
 
     //gets the input from the textFields
     public void ReadEnglish(string s)
