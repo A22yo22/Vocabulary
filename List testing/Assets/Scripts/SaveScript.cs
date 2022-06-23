@@ -54,7 +54,7 @@ public class SaveScript : MonoBehaviour
 
     public void SpawnVocabularyOBJs()
     {
-        Vector3 spawnPos = new Vector3(0, -80, 0);
+        Vector3 spawnPos = new Vector3(0, 0, 0);
 
         //removes all vocs that got spawned
         for (int i = 0; i < spawnedVocs.Count; i++)
@@ -66,8 +66,13 @@ public class SaveScript : MonoBehaviour
         for (int i = 0; i < listManager.VocabularyListEnglish.Count; i++)
         {
             GameObject voc = Instantiate(vocPrefab);
-            voc.transform.position = spawnPos;
+            voc.transform.localPosition = spawnPos;
+
+            Debug.Log(voc.transform.position);
+
             voc.transform.SetParent(viewPort.transform);
+
+            Debug.Log(voc.name);
 
             spawnPos.y -= 150;
 
