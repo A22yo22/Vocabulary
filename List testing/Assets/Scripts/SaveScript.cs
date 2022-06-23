@@ -71,7 +71,7 @@ public class SaveScript : MonoBehaviour
 
             voc.transform.SetParent(viewPort.transform);
 
-            voc.transform.localScale = Vector3.zero;
+            voc.transform.localScale = new Vector3(1, 1, 1);
 
             spawnPos.y -= 150;
 
