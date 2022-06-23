@@ -66,10 +66,8 @@ public class SaveScript : MonoBehaviour
         for (int i = 0; i < listManager.VocabularyListEnglish.Count; i++)
         {
             GameObject voc = Instantiate(vocPrefab);
-            voc.transform.SetParent(viewPort.transform);
             voc.transform.position = spawnPos;
-
-            Debug.Log(spawnPos.y);
+            voc.transform.SetParent(viewPort.transform);
 
             spawnPos.y -= 150;
 
