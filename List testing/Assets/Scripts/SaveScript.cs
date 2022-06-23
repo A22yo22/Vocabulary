@@ -68,6 +68,9 @@ public class SaveScript : MonoBehaviour
             GameObject voc = Instantiate(vocPrefab);
             voc.transform.SetParent(viewPort.transform);
             voc.transform.position = spawnPos;
+
+            Debug.Log(spawnPos.y);
+
             spawnPos.y -= 150;
 
             spawnedVocs.Add(voc);
