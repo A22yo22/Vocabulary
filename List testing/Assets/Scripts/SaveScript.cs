@@ -60,7 +60,12 @@ public class SaveScript : MonoBehaviour
         for (int i = 0; i < spawnedVocs.Count; i++)
         {
             Destroy(spawnedVocs[0]);
-            spawnedVocs.RemoveAt(0);
+        }
+
+        //clears the list
+        for (int i = 0; i < spawnedVocs.Count; i++)
+        {
+            spawnedVocs.RemoveRange(0, spawnedVocs.Count);
         }
 
         //spawns vocs
