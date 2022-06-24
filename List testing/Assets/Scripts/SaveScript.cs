@@ -79,6 +79,7 @@ public class SaveScript : MonoBehaviour
 
             voc.transform.position = spawnPos;
             Debug.Log(spawnPos);
+            Debug.Log(voc.transform.position);
         }
     }
 }
