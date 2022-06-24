@@ -71,15 +71,15 @@ public class SaveScript : MonoBehaviour
 
             voc.transform.localScale = new Vector3(1, 1, 1);
 
-            spawnPos.y -= 10;
+            spawnPos.y -= 150;
 
             spawnedVocs.Add(voc);
 
             voc.GetComponent<VocabalObjectScript>().SetObjectNames(PlayerPrefs.GetString("VocENG" + i), PlayerPrefs.GetString("VocGER" + i));
 
-            voc.transform.position = spawnPos;
+            voc.transform.localPosition = spawnPos;
             Debug.Log(spawnPos);
-            Debug.Log(voc.transform.position);
+            Debug.Log(voc.transform.localPosition);
         }
     }
 }
