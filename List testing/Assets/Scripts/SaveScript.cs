@@ -59,14 +59,11 @@ public class SaveScript : MonoBehaviour
         //removes all vocs that got spawned
         for (int i = 0; i < spawnedVocs.Count; i++)
         {
-            Destroy(spawnedVocs[0]);
+            Destroy(spawnedVocs[i]);
         }
 
         //clears the list
-        for (int i = 0; i < spawnedVocs.Count; i++)
-        {
-            spawnedVocs.RemoveRange(0, spawnedVocs.Count);
-        }
+        spawnedVocs.RemoveRange(0, spawnedVocs.Count);
 
         //spawns vocs
         for (int i = 0; i < listManager.VocabularyListEnglish.Count; i++)
