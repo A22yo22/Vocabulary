@@ -67,7 +67,7 @@ public class SaveScript : MonoBehaviour
         {
             GameObject voc = Instantiate(vocPrefab);
 
-            voc.transform.position = spawnPos;
+            voc.transform.position = Vector3.zero;
 
             voc.transform.SetParent(viewPort.transform);
 
