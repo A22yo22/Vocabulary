@@ -50,16 +50,17 @@ public class SaveScript : MonoBehaviour
         SpawnVocabularyOBJs();
     }
 
-    List<GameObject> spawnedVocs = new List<GameObject>();
+    public List<GameObject> spawnedVocs = new List<GameObject>();
 
     public void SpawnVocabularyOBJs()
     {
-        Vector3 spawnPos = new Vector3(0, 0, 0);
+        Vector3 spawnPos = new Vector3(0, 50, 0);
 
         //removes all vocs that got spawned
         for (int i = 0; i < spawnedVocs.Count; i++)
         {
-            spawnedVocs.RemoveAt(i);
+            Destroy(spawnedVocs[0]);
+            spawnedVocs.RemoveAt(0);
         }
 
         //spawns vocs
